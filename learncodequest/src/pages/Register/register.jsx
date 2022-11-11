@@ -1,7 +1,8 @@
 import { LayoutComponents } from '../../components/layoutComponents'
 import './styles.css'
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 export const Register = () => {
 
@@ -9,6 +10,35 @@ export const Register = () => {
     const[password, setPassword] = useState("")
     const[name, setName] = useState("")
     const[lastName, setLastName] = useState("")
+
+    const navigate = useNavigate();
+
+    const handleCreateAccount = (e) => {
+        e.preventDefault();
+        axios({
+            method: 'POST',
+            url: 'http://localhost:80/auth/register',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data: {
+                'name': name,
+                'lastname': lastName,
+                'email': email,
+                'password': password
+            }
+        })
+        .then(function (response) {
+            if(response.status !== 200){
+                console.log('error: ', response.data.error);
+                return;
+            }
+
+            const userData = response.data;
+            navigate('/principal', { state: { userData }});
+        })
+        .catch((err) => console.log(err))
+    }
 
     return(
         <LayoutComponents>
@@ -56,7 +86,7 @@ export const Register = () => {
                 </div>
 
                 <div className='container-login-form-btn'>
-                    <button className='login-form-btn'>Registrar</button>
+                    <button className='login-form-btn' onClick={handleCreateAccount}>Registrar</button>
                 </div>
 
                 <div className='text-center'>
@@ -65,7 +95,7 @@ export const Register = () => {
                 </div>
 
                 <div className='text-center' >
-                    <Link className='homePageButton' to='/'>Home Page</Link>
+                    <Link className='homePageButton' to='/'>Voltar</Link>
                 </div>
 
             </form>
