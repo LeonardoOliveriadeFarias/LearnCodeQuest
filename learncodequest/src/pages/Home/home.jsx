@@ -11,7 +11,7 @@ export const Home = () => {
             <div className="homePage">
                 <h2 className="appName">LearnCodeQuest</h2>
                 <text className="textoPage"> Aprenda de uma forma divertida <br/> e ganhe recompensas.<br/></text>
-                <Link to="/"><button className="botao">Saiba Mais</button></Link>
+                <Link to="/seletor"><button className="botao">Começe agora!</button></Link>
             </div>
             <div className="imagem">
                 <img src={imgTela} alt = "imagemDaPage" />

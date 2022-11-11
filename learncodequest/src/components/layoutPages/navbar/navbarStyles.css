@@ -11,12 +11,12 @@
     margin: 1px auto;
     width: auto;
     height: 4rem;
-    background-color: #0E2A47;
+    background: none;
     font-family: 'Open Sans Hebrew', serif;
     display: flex;
     align-items: center;
     border-bottom: 2px solid #48FFD5;
-    box-shadow: inset 100px 100px 250px 100px rgba(0, 0, 0, 0.25);   
+
 }
 
 .header p {

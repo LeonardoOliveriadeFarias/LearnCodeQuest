@@ -1,12 +1,12 @@
 .container{
    
-    width: 100%;
+    width: auto;
     margin: 0 auto; 
     background: rgba(14, 42, 71, 0.7);
 }
 
 .container-login{
-    width: 100%;
+    width: auto;
     min-height: 100vh;
 
     display: flex;
