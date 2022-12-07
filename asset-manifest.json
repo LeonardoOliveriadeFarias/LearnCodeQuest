@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/LearnCodeQuest/static/css/main.b40f3772.css",
+    "main.js": "/LearnCodeQuest/static/js/main.7687ef9a.js",
+    "static/media/banner-API.png": "/LearnCodeQuest/static/media/banner-API.2c0753b0c54d9ce82c31.png",
+    "static/media/unknown.png": "/LearnCodeQuest/static/media/unknown.67461c301f2fe7701204.png",
+    "static/media/spinner.gif": "/LearnCodeQuest/static/media/spinner.9186ce1366fcfbda9d02.gif",
+    "index.html": "/LearnCodeQuest/index.html",
+    "main.b40f3772.css.map": "/LearnCodeQuest/static/css/main.b40f3772.css.map",
+    "main.7687ef9a.js.map": "/LearnCodeQuest/static/js/main.7687ef9a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b40f3772.css",
+    "static/js/main.7687ef9a.js"
+  ]
+}
